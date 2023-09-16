@@ -1,0 +1,69 @@
+<!--pages/my/my.wxml-->
+<view class="table">
+<view bind:tap="back" class="she-box">退出登录</view>
+  <view class="home-box">
+    <cover-image class="auto-img" src="{{user.userimg}}"></cover-image>
+    <view class="user-name">{{user.username}}</view>
+  </view>
+  <view class="user-box">
+    <view class="tab-box">
+      <view class="xj-box">现金账户(元)</view>
+      <view class="jb-box">金币账户</view>
+    </view>
+    <view class="money-box">
+      <view class="money">{{hb}}元</view>
+      <view class="jb">{{jb}}</view>
+    </view>
+    <view class="last-box">
+      <view class="unit">{{n1}}金币=1元</view>
+      <view bind:tap="clickDui" class="xj">兑换现金</view>
+    </view>
+  </view>
+  <view class="tx-box">
+    <view wx:if="{{ktx > ytx}}" class="tit">当前可提现</view>
+    <view wx:else class="tit">距离下次提现还差{{n-nowLev%n}}个字谜</view>
+    <view class="xia">
+      <view class="jd-box">
+        <!-- <view class="jd"></view> -->
+        <van-progress percentage="{{(nowLev%n)*2*10 }}" />
+        <view class="jd-t">猜谜语拿红包：机会多多，冲冲冲！</view>
+      </view>
+      <!-- <view class="btn-t">提现</view> -->
+    </view>
+  </view>
+  <view class="tx-box">
+    <view class="tit">选择提现金额 (当前可提现次数：{{ktx - ytx}}次)</view>
+    <view class="je-box">
+      <view bind:tap="clickPrice" data-index="{{index}}" data-value="{{ item}}" wx:for="{{text}}" wx:key="index" class="jin-box {{isActive==index?'active':''}}">{{item}}元</view>
+    </view>
+    <view bind:tap="clickBigT" class="big-tx">提现</view>
+  </view>
+  <view class="last-box">提示：每{{n}}关有一次免费提现机会</view>
+  <!-- 兑换现金弹出框 -->
+  <van-dialog
+  use-slot
+  title="请确定兑换信息"
+  show="{{ show }}"
+  show-cancel-button
+  confirmButtonText="确定"
+  cancelButtonText="取消"
+  bind:cancel="onClose"
+  bind:confirm="userOk"
+>
+<view class="lod-box">{{jb}}金币≈{{dhb}}元</view>
+</van-dialog>
+<van-toast id="van-toast" />
+<!-- 提现弹出框 -->
+<van-dialog
+  use-slot
+  title="请确定提现信息"
+  show="{{ show1 }}"
+  show-cancel-button
+  confirmButtonText="确定"
+  cancelButtonText="取消"
+  bind:cancel="onClose1"
+  bind:confirm="userOk1"
+>
+<view class="lod-box">提现{{j}}元</view>
+</van-dialog>
+</view>

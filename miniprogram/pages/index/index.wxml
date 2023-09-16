@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<view class="table" >
+  <van-toast id="van-toast" />
+  <view class="title" >
+    <cover-image class="imgs" src="../../images/logo.png"></cover-image>
+  </view>
+  <view class="guess-box" bindtap="begin">开始游戏</view>
+  <view class="guess-box" bindtap="goVideo">看视频 赚金币</view>
+  <!-- <view class="box jigsawPuzzle-box">记忆配图</view>
+  <view class="box jigsawPuzzle-box">数独游戏</view> -->
+</view>

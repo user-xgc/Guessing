@@ -1,0 +1,109 @@
+<view class="table">
+  <view class="table-box">
+    <view class="jin">
+      <view class="j-box">币</view>
+      <view class="num-box">{{jb}}</view>
+    </view>
+    
+    <view class="hong">
+      <cover-image class="jb-img" src="../../images/hb.png"></cover-image>
+      <view class="num-box">{{hb}}元</view>
+    </view>
+  </view>
+  <view class="title-box">
+    <view bind:tap="clickCm" class="cm-rw {{cm==1?'active-left':''}}">猜谜任务</view>
+    <view bind:tap="clickDay" class="mr-rw {{ mr==1?'active-right':''}}">每日任务</view>
+  </view>
+  <view class="text-box">
+    <view wx:if="{{ qd==1}}" class="tx-box">
+      <view class="qian-box">
+        <view class="jrqd">今日签到</view>
+        <view  bind:tap="clickGet" class="btn-t qd">{{isQ == 0?'领取奖励':'已经领取'}}</view>
+      </view>
+      <view class="text-jb">
+        <view class="jj-box" wx:for="{{jbQd}}" wx:key="index">
+          <view wx:if="{{index<4}}">
+            <view>+{{item}}</view>
+          <view class="j-box g">币</view>
+          <view wx:if="{{index+1 <= qNum%5}}">已领取</view>
+          <view wx:else>待领取</view>
+          </view>
+          <view wx:else>
+            <view class="hb1-box">
+          <view>抽红包</view>
+          <cover-image class="hb-img" src="../../images/hb.png"></cover-image>
+          <view>待领取</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{tx==1}}" class="tx-box">
+      <view wx:if="{{ktx > ytx}}" class="tit">当前可提现</view>
+      <view wx:else class="tit">距离下次提现还差{{n - nu%n}}个字谜</view>
+      <view class="xia">
+        <view class="jd-box">
+          <!-- <view class="jd"></view> -->
+          <van-progress percentage="{{( nu%n)*2*10 }}" />
+          <view class="jd-t">猜谜语拿红包：机会多多，冲冲冲！</view>
+        </view>
+        <view bind:tap="clickT" class="btn-t">提现</view>
+      </view>
+    </view>
+    <view wx:for="{{cm == 1?cgText:mrText}}" wx:key="index" class="tx-box tx">
+      <view class="tit texts" wx:if="{{cm==1}}">
+        <view>累计通过 {{ item.title}} 关</view>
+        <view class="ti-box">{{nu>=item.title?item.title:nu}}/{{ item.title}}</view>
+      </view>
+      <view class="tit texts" wx:elif="{{ cm==0}}">
+        <view>{{ item.title}}</view>
+        <view class="ti-box">{{number>item.n?item.n:number}}/{{item.n}}</view>
+        <!-- <view class="ti-box">{{index==0?'':item.number}}{{index==0?'':'/'}}{{ index==0?'':item.n}}</view> -->
+      </view>
+      <view class="xia">
+        <view class="jd-box">
+          <view class="jd-t">
+            <cover-image wx:if="{{cm==1}}" class="jb-img" src="../../images/hb.png"></cover-image>
+            <view wx:else class="j-box">币</view>
+            <view wx:if="{{cm==1}}" class="money">{{item.price}}元</view>
+            <view wx:else class="money">x{{item.price}}</view>
+          </view>
+        </view>
+        <view bind:tap="clickBtn" data-value="{{item.init}}" data-index="{{index}}" data-type="{{cm}}" class="btn-t ab {{item.init == 0?'wwc':item.init == 1?'lq':'ylq'}}">{{item.init == 0?'未完成':item.init == 1?'领取奖励':'已领取'}}</view>
+        <!-- <view bind:tap="clickBtn" data-value="{{item.init}}" data-index="{{index}}" class="btn-t {{item.init == 0?'wwc':item.init == 1?'lq':'ylq'}}">{{item.init == 0?'未完成':item.init == 1?'领取奖励':'已领取'}}</view> -->
+        <van-toast id="van-toast" />
+      </view>
+    </view>
+    <!-- 签到 -->
+    <!-- <view class="tx-box tx">
+      <view class="tit texts">
+        <view>累计答对10个字谜</view>
+        <view class="ti-box">5/10</view>
+      </view>
+      <view class="xia">
+        <view class="jd-box">
+          <view class="jd-t">
+            <cover-image class="jb-img" src="../../images/hb.png"></cover-image>
+            <view class="money">100元</view>
+          </view>
+        </view>
+        <view class="btn-t wwc">未完成</view>
+      </view>
+    </view>
+    <view class="tx-box tx">
+      <view class="tit texts">
+        <view>累计答对10个字谜</view>
+        <view class="ti-box">5/10</view>
+      </view>
+      <view class="xia">
+        <view class="jd-box">
+          <view class="jd-t">
+            <view class="j-box">币</view>
+            <view class="money">x1000</view>
+          </view>
+        </view>
+        <view class="btn-t ylq">已领取</view>
+      </view>
+    </view> -->
+  </view>
+</view>

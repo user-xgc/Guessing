@@ -1,0 +1,14 @@
+<!--pages/checkpoint/checkpoint.wxml-->
+<!-- <van-toast id="van-toast" /> -->
+<view class="table">
+  <van-toast id="van-toast" />
+<view bind:tap="goHome" class="sy-box">首页</view>
+  <view class="text-box">
+    <view bind:tap="clickTg" data-num="{{index+1}}" class="text b" wx:for="{{completed_lev}}" wx:key="index">{{index+1}}</view>
+
+    <view class="text" bind:tap="play">{{completed_lev+1}}</view>
+    <view bind:tap="clickWjs" class="text a" wx:for="{{level_num.length - completed_lev - 1}}" wx:key="index">
+      <cover-image src="../../images/suo.png"></cover-image>
+    </view>
+  </view>
+</view>

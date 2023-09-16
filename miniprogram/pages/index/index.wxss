@@ -1,0 +1,22 @@
+/* pages/index/index.wxss */
+.table{
+  height: 1110rpx;
+  background-image: url(https://bpic.588ku.com/back_pic/05/94/31/485d2dcceeebd47.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.imgs{
+  height: 190rpx;
+  margin-top: 200rpx;
+  margin-left: -86rpx;
+}
+.guess-box{
+  background-color: #ead9a9;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 300rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  border: 1px solid #928161;
+  margin: 200rpx auto;
+}

@@ -1,0 +1,62 @@
+<!--pages/leve/leve.wxml-->
+<view class="table">
+  <view class="name-box">第 {{level}} 关</view>
+  <view class="jb-box">
+    <view class="img-box">币</view> {{jb}}
+  </view>
+  <view class="text-box">
+    <view class="box">
+      <view class="cen-box"></view>
+    </view>
+    <view class="center-box">
+      <view class="mm">{{ lev_text.mt}}</view>
+      <view class="md">({{ lev_text.t}})</view>
+    </view>
+    <view class="box">
+      <view class="cen-box"></view>
+    </view>
+  </view>
+  <view wx:if="{{isTrue === 1}}" class="dn-false">回答正确 √</view>
+  <view wx:elif="{{isTrue === 2}}" class="dn-false">回答错误 X</view>
+  <view wx:else class="dn-false"> </view>
+  <van-dialog
+  use-slot
+  title="第{{level}}关"
+  show="{{ show }}"
+  show-cancel-button
+  confirmButtonText="下一关"
+  cancelButtonText="选关"
+  bind:cancel="onClose"
+  bind:confirm="userOk"
+>
+<view class="lod-box">恭喜闯关成功</view>
+<view wx:if="{{jbShow}}" class="set-box"><view class="img-box">币</view><view class="aaa">x{{jbNumber}}</view></view>
+</van-dialog>
+  <view class="md-box">
+    <view bind:tap="clickA" data-index="{{ index}}" data-value="{{dn_level[index]}}" class="text text-md " wx:for="{{lev_text.md.length}}" wx:key="index"><text>{{dn_level[index]}}</text></view>
+  </view>
+  <view class="ts-box">
+    <view bind:tap="clickTs" class="text jb-ts">
+      <cover-image class="dp-img" src="../../images/dp.png"></cover-image>
+      <view class="b-box">
+        <view class="b">币</view>
+        <view class="pr">{{ts}}</view>
+      </view>
+    </view>
+    <view bind:tap="clickVideo" class="mf-ts">
+      <cover-image class="sp-box" src="../../images/sp.png"></cover-image>
+      <view>免费提示</view>
+    </view>
+    <view bind:tap="clickHelp" class="text qz-ts">
+      <view class="wen">?</view>
+      <view class="qiu">求助</view>
+    </view>
+  </view>
+  <view class="dn-box">
+      <view wx:for="{{dn_list}}" wx:key="index"  class="dn" bind:tap="choice" data-index="{{index}}" data-value="{{ item}}">
+        <text class="{{isShow[index]?'active':''}}">{{ item}}</text>
+        <!-- <text class="{{index===isActive?'active':''}}">{{ item}}</text> -->
+      </view>
+      <van-toast id="van-toast" />
+  </view>
+</view>

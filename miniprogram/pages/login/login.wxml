@@ -1,0 +1,6 @@
+<!--pages/login/login.wxml-->
+<view>
+  <input type="text" placeholder="输入用户名" value="{{userInfo.username}}" data-key="username" bind:change="inputUserInfo" />
+  <input type="text" password placeholder="输入密码" value="{{userInfo.password}}" data-key="password" bind:change="inputUserInfo" />
+  <button bindtap="login" type="primary">登录</button>
+</view>

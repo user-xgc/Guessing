@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/my/my",
+    "pages/task/task",
+    "pages/checkpoint/checkpoint",
+    "pages/leve/leve"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fddc5b",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#CDCDCD",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home_active.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "./images/task.png",
+        "selectedIconPath": "./images/task_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/my.png",
+        "selectedIconPath": "./images/my_active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-progress": "@vant/weapp/progress/index"
+  }
+}

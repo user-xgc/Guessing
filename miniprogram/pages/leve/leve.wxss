@@ -1,0 +1,219 @@
+/* pages/leve/leve.wxss */
+.table{
+  background-color: #cee3d9;
+  height: 1207rpx;
+  background-image: url(https://bpic.588ku.com/back_pic/05/94/31/485d2dcceeebd47.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.name-box{
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin: 20rpx auto;
+  border: 4rpx solid #33595f;
+  color: #105053;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.jb-box{
+  display: flex;
+  background-color: #2c545b;
+  color: #cee3d9;
+  width: 250rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  margin: auto;
+}
+.img-box{
+  height: 50rpx;
+  width: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+  background-color: #d5a436;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 50%;
+  margin-top: 6rpx;
+}
+.text-box{
+  display: flex;
+  width: 618rpx;
+  margin: 40rpx auto;
+}
+.center-box{
+  width: 578rpx;
+  background-color: #fbf9e6;
+  height: 340rpx;
+  margin-top: 20rpx;
+  border-top: 6rpx solid #376a73;
+  border-bottom: 6rpx solid #376a73;
+  color: #93765c;
+  font-size: 40rpx;
+}
+.box{
+  height: 400rpx;
+  width: 20rpx;
+  background-color: #dbc776;
+  border-radius: 8rpx;
+}
+.cen-box{
+  height: 350rpx;
+  background-color: #376a73;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.mm{
+  height: 230rpx;
+  text-align: center;
+  width: 540rpx;
+  margin: 10rpx auto;
+}
+.md{
+  text-align: center;
+}
+.md-box{
+  display: flex;
+  width: 600rpx;
+  margin: auto;
+  background-color: aquamarine;
+  justify-content: space-evenly;
+}
+.text{
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+.text-md{
+  border: 4rpx solid #daa787;
+  border-radius: 10rpx;
+  background-image: radial-gradient(#fce6a6, #fdf3d5);
+}
+.ts-box{
+  display: flex;
+  width: 500rpx;
+  margin: auto;
+  justify-content:space-around;
+  margin-top: 40rpx;
+}
+.jb-ts{
+  border: 4rpx solid #848484;
+  border-radius: 10rpx;
+  background-image: radial-gradient(#696969, #848484);
+}
+.mf-ts{
+  height: 70rpx;
+  width: 150rpx;
+  line-height: 70rpx;
+  background-image: radial-gradient(#709c10, #c6eb4d);
+  color: #fbf9e6;
+  border: 4rpx solid #c6eb4d;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+}
+.qz-ts{
+  border: 4rpx solid #acc8b4;
+  border-radius: 10rpx;
+  background-image: radial-gradient(#377a64, #acc8b4);
+}
+.dp-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: auto;
+}
+.b-box{
+  font-size: 20rpx;
+  color: #cee3d9;
+  display: flex;
+  line-height: 30rpx;
+  margin-top: -8rpx;
+}
+.b{
+  height: 30rpx;
+  width: 30rpx;
+  background-color: #d5a436;
+  border-radius: 50%;
+}
+.pr{
+  margin-left: 15rpx;
+}
+.sp-box{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 10rpx;
+}
+.wen{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 60rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.qiu{
+  color: #ffffff;
+  height: 20rpx;
+  line-height: 20rpx;
+  font-size: 20rpx;
+}
+.dn-box{
+  display:flex;
+  width: 700rpx;
+  margin:40rpx auto;
+  flex-wrap: wrap;
+  align-content:flex-start
+}
+.dn{
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  border: 4rpx solid #d39e8c;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  background-color: #f5f3ed;
+  color: #407272;
+}
+.dn-false{
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  height: 90rpx;
+  margin-top: -80rpx;
+  line-height: 90rpx;
+  color: #e2390e;
+}
+.active{
+  display: none;
+}
+.lod-box{
+  background-image: url(https://bpic.588ku.com/back_our/20210217/bg/28ae5ee1d925d.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: 100% 100%;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  color: #097468;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.set-box{
+  display: flex;
+  margin: auto;
+  width: 200rpx;
+  margin-top: -40rpx;
+}
+.aaa{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #d5a436;
+  font-weight: bold;
+  margin-left: -20rpx;
+}
